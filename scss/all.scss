@@ -1,0 +1,307 @@
+$light-gary : #f6f6f6;
+$main-green:#00cc99;
+$dark-green:#00644b;
+$pink:#e12d80;
+$fb-blue:#4460a0;
+$twitter-blue:#02abec;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+input,label{
+    display: block;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display:block;
+}
+
+.container{
+    width:1200px;
+    margin:0 auto;
+}
+
+header{
+    .media{
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        background:$light-gary;
+        li img{
+            padding:0 5px;
+            display: inline;
+        }
+        li:first-child a{
+            color: $fb-blue;
+            border-right: 1px solid black;
+        }
+        li:last-child a{
+            color: $twitter-blue;
+        }
+        li a{
+            padding:10px;
+        }
+    }
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    .logo{
+        width:230px;
+        padding:30px 0;
+        background: url(../images/logo.png) no-repeat center center;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .menu{
+        display: flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+    .menu-list{
+        position: relative;
+        a{
+            padding:30px 30px;
+            color:$main-green;
+            text-align: center;
+            &:hover{
+                color:white;
+                background:$dark-green;
+            }
+        }
+        .dropdown{
+            position: absolute;
+            right: 0;
+            z-index: 1000;
+            background:white;
+            text-align: center;
+            border-left: 5px solid $main-green;
+            display:none;
+        }
+    }
+}
+
+.active{
+    color:white !important;
+    background:$dark-green;
+}
+
+.banner{
+    position: relative;
+    h2{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        color:white;
+        background:rgba(0,0,0,.5);
+        font-size: 36px;
+        padding:40px 50px;
+        transform:translateY(-50%);
+        z-index: 3;
+        line-height:45px;
+    }
+    img{
+        width: 100%;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        color: white;
+    }
+}
+  
+.course{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 60px;
+    .course-item{
+        width:300px;
+        box-shadow:2px 0px 8px 1px rgba(0,0,0,.3);
+        padding:25px 20px;
+        transition: all .3s;
+        &:hover{
+            transform: translateY(-15px);
+            transition: all .3s;
+        }
+    }
+    .course-img{
+        height: 100px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    h4{
+        font-size:20px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+    p,ul{
+        line-height:25px;
+        text-align:justify; 
+        margin-top: 10px;
+    }
+    ul{
+        list-style: disc;
+        padding:0 20px;
+    }
+}
+
+h3{
+    font-size:24px;
+    text-align:center;
+}
+  
+.course-difference{
+    margin-top: 60px;
+    table{
+        width:80%;
+        margin:30px auto;
+        text-align: left;
+        tr:hover{
+            background:$light-gary;
+            transition: all .2s;
+        }
+        th,td{
+            padding:15px;
+        }
+        th{
+            border-top:1px solid black;
+            border-bottom:1px solid black;
+        }
+        td{
+            border-bottom:1px solid black;
+        }
+        thead{
+            background:$light-gary;
+        }
+    }
+    .point{
+        color: $main-green;
+    }
+}
+
+.contact{
+    margin-top: 60px;
+    background:linear-gradient($dark-green , $main-green);
+    padding:40px;
+    color:white;
+    h3{
+        line-height:36px;
+    }
+    form{
+        display:flex;
+        margin-top: 30px;
+        border:0;
+        textarea,input,button{
+            border:0;
+            outline:none;
+        }
+        textarea{
+            width:50%;
+            margin-right:20px;
+            padding:10px;
+        }
+        .form-group{
+            width:50%;
+            .input-group{
+                margin-bottom: 15px;
+            }
+            input{
+                width:100%;
+                padding:10px;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+        }
+    }
+    .button-type{
+        text-align: right;
+        button{
+            margin-top:20px;
+            padding:10px 20px;
+            background:$main-green;
+            color:white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover{
+                background:$dark-green;
+                transition: all .3s;
+                box-shadow: 2px 2px 3px rgba(0,0,0,.6);
+            }
+        }
+    }
+}
+
+footer{
+    padding:30px 0;
+    display: flex;
+    justify-content:space-between;
+    .footer-info{
+        li{
+            display:flex;
+            padding:5px 0;
+        }
+        a{
+            color:$pink;
+            &:hover{
+                color:$main-green;
+            }
+        }
+    }
+}
